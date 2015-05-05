@@ -1,0 +1,688 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+	
+	
+	<link rel="stylesheet" href="styles/pwt/animate.min.css">
+	<link rel="stylesheet" href="styles/pwt/frontpage.css">
+	<link rel="stylesheet" href="styles/pwt/powertour-connectors.css">
+	<link rel="stylesheet" href="styles/pwt/powertour-mobile.css">
+	<link rel="stylesheet" href="styles/pwt/powertour-style-clean.css">
+	<link rel="stylesheet" href="styles/pwt/powertour.2.2.0.css">
+
+	<link rel="stylesheet" href="styles/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="styles/style.css"> <!-- Resource style -->
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+  	<style type="text/css"> 
+  		html, body{
+  			overflow-x: hidden; 
+  		}
+		canvas { 
+			background-color:#000; 			
+		}
+		.content-canvas h1, .content-canvas h2{
+			color: #FFF;
+		}
+		.content-header,.content-footer {
+			text-align: center;
+		}
+		.content-canvas{
+			background-color: transparent;
+			position: absolute;
+			top: 10%;
+		    left: 10%;
+		    right: 10%;
+		}
+		.content-body{
+			height: 25vh;
+		}
+		.content-footer {
+			margin-top: 5%;
+		}
+		#demo-bar-footer{
+			z-index: -1;
+		}
+		.step-header{
+			background: transparent;
+		}
+		.step-header h1{
+			text-align: center;
+			margin-bottom: 5%;
+			font-size: 1em;
+		}
+		.cd-timeline-img.cd-picture{
+			background-color: #FF4842;
+			color: #fff;
+		}
+		.cd-timeline-img.cd-movie{
+			background-color: #7DCD40;
+			color: #fff;
+		}
+		.cd-timeline-img.cd-location{
+			background-color: #3AADCA;
+			color: #fff;
+		}
+		.cd-timeline-img.cd-blog {
+		    background: #FCC23C;
+		    color: #fff;
+		}
+		.comp-mid{
+			margin-left: 25%;
+    		margin-top: 25%;
+    		font-weight: bold;
+    		font-size: 18px;
+		}
+		.comp-mid-sb{
+			margin-left: 25%;
+    		margin-top: 25%;
+    		font-size: 18px;
+    		font-weight: 500;
+		}
+		.comp-mid-ml{
+			margin-left: 25%;
+    		margin-top: 25%;
+    		font-size: 20px;
+		}
+		.comp-mid-mml{
+			margin-left: 29%;
+    		margin-top: 25%;
+    		font-size: 20px;
+		}
+		footer{
+			height: auto;
+			background: #16210B; 
+			text-align: center;
+			padding: 100px;
+		}
+		footer p{
+			color: #fff;
+			font-size: 2em;
+			margin-bottom: 2%;
+		}
+		footer a{
+			color: #FFF;
+		}
+		@media only screen and (min-width: 1170px) {
+			.comp-mid, .comp-mid-sb, .comp-mid-ml, .comp-mid-mml{
+	    		font-size: 26px;
+			}
+		}
+		@media (max-width: 700px){
+			.jodersito{
+				display: none;
+			}
+		}
+	</style> 
+	<title>Responsive Vertical Timeline</title>
+</head>
+	<body>
+        <div id="step-one" class="single-step">
+            <div class="step-header">
+            	<h1>Welcome to the ITUX tour</h1>
+            </div><br>
+            <p>
+            Welcome to the Power Tour plugin a powerful and creative tour solution. Please fasten your seatbelts, it's gonna be a wild(creative) ride.
+            </p>
+            <p>
+            <i>Enjoy the tour!</i>
+            </p>
+            <footer>
+                <a href="#" class="btn btn-default" data-powertour-action="stop">Cancel</a>
+                <a href="#" class="btn btn-primary pull-right" data-powertour-action="next">Continue</a>
+            </footer> 
+        </div>
+        
+        <div id="step-two" class="single-step">
+        	<span class="connectorarrow-lt"><!-- custom --></span> 
+            <div class="step-header">
+            	<h1>2. IPROJECTS</h1>
+            </div><br>
+            <p>
+           		IPROJECTS is the section where cant developer your incredible and stravagants apps
+            </p><br><br>
+            <footer>            
+                <a href="#" class="btn btn-default" data-powertour-action="prev">Prev</a>  
+                <a href="#" class="btn btn-default" data-powertour-action="goto" data-powertour-goto="1">1</a>
+                <a href="#" class="btn btn-default" data-powertour-action="goto" data-powertour-goto="2">2</a>
+                <a href="#" class="btn btn-default" data-powertour-action="goto" data-powertour-goto="3">3</a>
+                <a href="#" class="btn btn-primary" data-powertour-action="next">Next</a>         
+                <a href="#" class="btn btn-default pull-right" data-powertour-action="stop">Stop</a>       
+            </footer> 
+        </div>
+        
+        <div id="step-three" class="single-step">
+        	<span class="connectorarrow-rt"><!-- custom --></span> 
+            <div class="step-header">
+            	<h1>3. ICOMMUNITY</h1>
+            </div><br>
+            <p>
+           		ICOMMUNITY is the section where cant shared and know your questions with the help pf any persons in own communidad subscrita
+            </p><br><br>
+            <footer>            
+                <a href="#" class="btn btn-default" data-powertour-action="prev">Prev</a>  
+                <a href="#" class="btn btn-default" data-powertour-action="goto" data-powertour-goto="1">1</a>
+                <a href="#" class="btn btn-default" data-powertour-action="goto" data-powertour-goto="2">2</a>
+                <a href="#" class="btn btn-default" data-powertour-action="goto" data-powertour-goto="3">3</a>
+                <a href="#" class="btn btn-primary" data-powertour-action="next">Next</a>         
+                <a href="#" class="btn btn-default pull-right" data-powertour-action="stop">Stop</a>       
+            </footer> 
+        </div>
+
+        <div id="step-four" class="single-step">
+        	<span class="connectorarrow-lt"><!-- custom --></span> 
+            <div class="step-header">
+            	<h1>4. ILABS</h1>
+            </div><br>
+            <p>
+           		ILABS is the section where cant shared and know your questions with the help pf any persons in own communidad subscrita
+            </p><br><br>
+            <footer>            
+                <a href="#" class="btn btn-default" data-powertour-action="prev">Prev</a>  
+                <a href="#" class="btn btn-default" data-powertour-action="goto" data-powertour-goto="1">1</a>
+                <a href="#" class="btn btn-default" data-powertour-action="goto" data-powertour-goto="2">2</a>
+                <a href="#" class="btn btn-default" data-powertour-action="goto" data-powertour-goto="3">3</a>
+                <a href="#" class="btn btn-primary" data-powertour-action="next">Next</a>         
+                <a href="#" class="btn btn-default pull-right" data-powertour-action="stop">Stop</a>       
+            </footer> 
+        </div>
+
+         <div id="step-five" class="single-step">
+        	<span class="connectorarrow-rt"><!-- custom --></span> 
+             <div class="step-header">
+            	<h1>5. IBLOG</h1>
+            </div><br>
+            <p>
+           		IBLOG is the section where cant shared and know your questions with the help pf any persons in own communidad subscrita
+            </p><br><br>
+            <footer>            
+	             <a href="#" class="btn btn-default" data-powertour-action="prev">Prev</a>  
+	             <a href="#" class="btn btn-default" data-powertour-action="goto" data-powertour-goto="1">1</a>
+	             <a href="#" class="btn btn-default" data-powertour-action="goto" data-powertour-goto="2">2</a>
+	             <a href="#" class="btn btn-default" data-powertour-action="goto" data-powertour-goto="3">3</a>
+	             <a href="#" class="btn btn-primary" data-powertour-action="next">Next</a>         
+	             <a href="#" class="btn btn-default pull-right" data-powertour-action="stop">Stop</a>   
+	        </footer> 
+        </div>
+
+        <div id="step-six" class="single-step">
+			<span class="connectorarrow-lt"><!-- custom --></span> 
+            <div class="step-header">
+            	<h1>End Tour</h1>
+            </div><br>
+            <p>ITUX providers IPROJECTS, ICOMMUNITY, ILABS, IBLOG.</p>
+            <p></p>
+            <strong>SUBSCRIBE NOW</strong>
+            <p></p>
+            <input type="text" placeholder="Just type something here" class="form-control" name="" id="step-validation-input-1"/>
+            <p></p>
+            <footer>
+                <a href="#" class="btn btn-default" data-powertour-action="stop">Stop</a>
+                <div class="pull-right">
+                    <a href="#" class="btn btn-default" data-powertour-action="prev">Go back</a>                
+                    <a href="#" class="btn btn-primary" data-powertour-action="next">Next step</a>
+                </div>
+            </footer>
+        </div> 
+          
+	
+	<div class="content-canvas">
+		<div class="content-header">
+			<h1 id="fittext1">ITUX</h1>
+			<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 80 +</h2>
+		</div>
+		<div class="content-body"></div>
+		<div class="content-footer">
+			<div class="container">
+				<div class="row des">
+					<div class="col-lg-4">
+						<button type="button" id="starttour-1" class="btn btn-primary"><i class="fa fa-bed"></i> <span class="jodersito"> second</span></button>
+					</div>
+					<div class="col-lg-4">
+						<button type="button" class="btn btn-primary"><i class="fa fa-bed"></i> <span class="jodersito"> second</span></button>
+					</div>
+					<div class="col-lg-4">
+						<button type="button" class="btn btn-primary"><i class="fa fa-bed"></i> <span class="jodersito"> second</span></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		var canvas = document.createElement('canvas'); 
+		var ctx = canvas.getContext('2d'); 
+		document.body.appendChild(canvas); 
+		canvas.width = window.innerWidth; 
+		canvas.height = window.innerHeight; 
+		var particles = []; 
+		setInterval(draw, 16); 
+		function draw() { 
+			ctx.clearRect(0,0,canvas.width, canvas.height);
+			var p = {
+						x : canvas.width/2, 
+						y : canvas.height/2, 
+						xSpeed : Math.random() * 10 - 5, 
+						ySpeed : Math.random() * 10 - 5,
+						colour : '#fff' 
+						/*colour : 'hsl('+Math.random()*360+', 100%, 50%)'*/
+					}
+			particles.push(p); 
+			for(var i = 0; i<particles.length; i++) { 
+				p = particles[i]; 
+				ctx.fillStyle = p.colour; 
+				ctx.fillRect(p.x,p.y,2.5,2.5);
+				p.x = p.x+p.xSpeed;
+				p.y = p.y+p.ySpeed;
+			}
+		}
+	</script>
+	<header>
+		<h1>Itux line content</h1>
+	</header>
+
+	<section id="cd-timeline" class="cd-container">
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-picture" id="hook-two">
+				<i class="fa fa-skyatlas fa-2x comp-mid"></i>
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>iProjects</h2>
+				<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p> -->
+				<a href="#0" class="cd-read-more">Read more</a>
+				<!-- <span class="cd-date">Jan 14</span> -->
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-movie" id="hook-three">
+				<i class="fa fa-users fa-2x comp-mid-ml"></i>
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>iCommunity</h2>
+				<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p> -->
+				<a href="#0" class="cd-read-more">Read more</a>
+				<!-- <span class="cd-date">Jan 18</span> -->
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-location" id="hook-four">
+				<i class="fa fa-flask fa-2x comp-mid-mml"></i>
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>iLabs</h2>
+				<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p> -->
+				<a href="#0" class="cd-read-more">Read more</a>
+				<!-- <span class="cd-date">Jan 24</span> -->
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-blog" id="hook-five">
+				<i class="fa fa-newspaper-o fa-2x comp-mid-sb"></i>
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>iBlog</h2>
+				<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p> -->
+				<a href="#0" class="cd-read-more">Read more</a>
+				<!-- <span class="cd-date">Feb 14</span> -->
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-picture" id="hook-six">
+				<img src="http://codyhouse.co/demo/vertical-timeline/img/cd-icon-movie.svg" alt="Movie">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>iPromotions</h2>
+				<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p> -->
+				<a href="#0" class="cd-read-more">Read more</a>
+				<!-- <span class="cd-date">Feb 18</span> -->
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-movie">
+				<img src="http://codyhouse.co/demo/vertical-timeline/img/cd-icon-location.svg" alt="Location">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>iNext</h2>
+				<!-- <p>This is the content of the last section</p> -->
+				<a href="#0" class="cd-read-more">Read more</a>
+				<!-- <span class="cd-date">Feb 26</span> -->
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+	</section> <!-- cd-timeline -->
+	<footer>
+		<p>
+			Itux.pe  <i class="fa fa-qq fa-2x"></i>
+		</p>
+		<div class="fa-stack fa-lg">
+		  <i class="fa fa-circle fa-stack-2x"></i>
+		  <a href="#"><i class="fa fa-facebook fa-stack-1x fa-inverse"></i></a>
+		</div>
+		<div class="fa-stack fa-lg">
+		  <i class="fa fa-circle fa-stack-2x"></i>
+		  <a href="#"><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></a>
+		</div>
+		<div class="fa-stack fa-lg">
+		  <i class="fa fa-circle fa-stack-2x"></i>
+		  <a href="#"><i class="fa fa-google-plus fa-stack-1x fa-inverse"></i></a>
+		</div>
+		<div class="fa-stack fa-lg">
+		  <i class="fa fa-circle fa-stack-2x"></i>
+		  <a href="#"><i class="fa fa-github fa-stack-1x fa-inverse"></i></a>
+		</div>
+		<div class="fa-stack fa-lg">
+		  <i class="fa fa-circle fa-stack-2x"></i>
+		  <a href="#"><i class="fa fa-bitbucket fa-stack-1x fa-inverse"></i></a>
+		</div>
+		<div class="fa-stack fa-lg">
+		  <i class="fa fa-circle fa-stack-2x"></i>
+		  <a href="#"><i class="fa fa-youtube fa-stack-1x fa-inverse"></i></a>
+		</div>
+	</footer>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/jquery.fittext.js"></script>
+	<script src="js/main.js"></script> <!-- Resource jQuery -->
+	<script src="js/public/pwt/demo.js"></script>
+	<script src="js/public/pwt/jquery-ui-1.10.4.min.js"></script>
+	<script>
+		$(document).ready(function(e) {
+		    e("body").powerTour({
+		        tours: [{
+		            trigger: "#starttour-1",
+		            startWith: 1,
+		            easyCancel: true,
+		            escKeyCancel: true,
+		            scrollHorizontal: false,
+		            keyboardNavigation: true,
+		            loopTour: false,
+		            onStartTour: function(t) {
+		                e("#demo-bar-footer").animate({
+		                    bottom: 0
+		                }, 1e3)
+		            },
+		            onEndTour: function(t) {
+		                e("html, body").animate({
+		                    scrollTop: 0
+		                }, 1e3, "swing");
+		                e("#progressmeter").children("#progressmeter-bar").width(0).next().text();
+		                e("#demo-bar-footer").animate({
+		                    bottom: "-70px"
+		                }, 1e3)
+		            },
+		            onProgress: function(t) {
+		                var n = t.stepIndex + 1;
+		                var r = t.totalSteps;
+		                var i = 100 / r * n + "%";
+		                e("#progressmeter-text").html("<span>" + n + "</span> / " + r + "").prev("#progressmeter-bar").animate({
+		                    width: i
+		                }, 400)
+		            },
+		            steps: [{
+		                hookTo: "",
+		                content: "#step-one",
+		                width: 350,
+		                position: "str",
+		                offsetY: -80,
+		                offsetX: -50,
+		                fxIn: "lightSpeedIn",
+		                fxOut: "bounceOutLeft",
+		                showStepDelay: 0,
+		                center: "step",
+		                scrollSpeed: 400,
+		                scrollEasing: "swing",
+		                scrollDelay: 0,
+		                timer: "00:20",
+		                highlight: false,
+		                keepHighlighted: false,
+		                onShowStep: function(e) {},
+		                onHideStep: function(e) {}
+		            }, {
+		                hookTo: "#hook-two",
+		                content: "#step-two",
+		                width: 360,
+		                position: "rt",
+		                offsetY: 0,
+		                offsetX: 20,
+		                fxIn: "slideInDown",
+		                fxOut: "slideOutUp",
+		                showStepDelay: 500,
+		                center: "step",
+		                scrollSpeed: 400,
+		                scrollEasing: "swing",
+		                scrollDelay: 500,
+		                timer: "00:30",
+		                highlight: true,
+		                keepHighlighted: false,
+		                onShowStep: function(e) {},
+		                onHideStep: function(e) {}
+		            }, {
+		                hookTo: "#hook-three",
+		                content: "#step-three",
+		                width: 360,
+		                position: "lt",
+		                offsetY: 0,
+		                offsetX: 20,
+		                fxIn: "slideInDown",
+		                fxOut: "slideOutUp",
+		                showStepDelay: 500,
+		                center: "step",
+		                scrollSpeed: 400,
+		                scrollEasing: "swing",
+		                scrollDelay: 500,
+		                timer: "00:30",
+		                highlight: true,
+		                keepHighlighted: false,
+		                onShowStep: function(e) {},
+		                onHideStep: function(e) {}
+		            }, {
+		                hookTo: "#hook-four",
+		                content: "#step-four",
+		                width: 360,
+		                position: "rt",
+		                offsetY: 0,
+		                offsetX: 20,
+		                fxIn: "slideInDown",
+		                fxOut: "slideOutUp",
+		                showStepDelay: 500,
+		                center: "step",
+		                scrollSpeed: 400,
+		                scrollEasing: "swing",
+		                scrollDelay: 500,
+		                timer: "00:30",
+		                highlight: true,
+		                keepHighlighted: false,
+		                onShowStep: function(e) {},
+		                onHideStep: function(e) {}
+		            }, {
+		                hookTo: "#hook-five",
+		                content: "#step-five",
+		                width: 360,
+		                position: "lt",
+		                offsetY: 0,
+		                offsetX: 20,
+		                fxIn: "slideInDown",
+		                fxOut: "slideOutUp",
+		                showStepDelay: 500,
+		                center: "step",
+		                scrollSpeed: 400,
+		                scrollEasing: "swing",
+		                scrollDelay: 500,
+		                timer: "00:30",
+		                highlight: true,
+		                keepHighlighted: false,
+		                onShowStep: function(e) {},
+		                onHideStep: function(e) {}
+		            }, {
+		                hookTo: "#hook-six",
+		                content: "#step-six",
+		                width: 360,
+		                position: "rt",
+		                offsetY: 0,
+		                offsetX: 20,
+		                fxIn: "slideInDown",
+		                fxOut: "slideOutUp",
+		                showStepDelay: 500,
+		                center: "step",
+		                scrollSpeed: 400,
+		                scrollEasing: "swing",
+		                scrollDelay: 500,
+		                timer: "00:30",
+		                highlight: true,
+		                keepHighlighted: false,
+		                onShowStep: function(t) {
+		                    var n = t.currentStep.find("[data-powertour-action=next]");
+		                    e("body").attr("data-powertour-disable-next", true);
+		                    n.addClass("btn-disabled");
+		                    e("#step-validation-input-1").keyup(function(t) {
+		                        if (e(this).val().length > 3) {
+		                            e("body").removeAttr("data-powertour-disable-next");
+		                            n.removeClass("btn-disabled");
+		                            e(this).addClass("input-valid")
+		                        }
+		                    })
+		                },
+		                onHideStep: function(t) {
+		                    e("body").removeAttr("data-powertour-disable-next");
+		                    e("#step-validation-input-1").removeClass("input-valid").val("")
+		                }
+		            }],
+		        stepDefaults: [{
+		                width: 300,
+		                position: "tr",
+		                offsetY: 0,
+		                offsetX: 0,
+		                fxIn: "fadeIn",
+		                fxOut: "fadeOut",
+		                showStepDelay: 0,
+		                center: "step",
+		                scrollSpeed: 400,
+		                scrollEasing: "swing",
+		                scrollDelay: 0,
+		                timer: "00:00",
+		                highlight: true,
+		                keepHighlighted: false,
+		                onShowStep: function(e) {},
+		                onHideStep: function(e) {}
+		            }]
+		        }, {
+		            trigger: "#starttour-2",
+		            startWith: 1,
+		            easyCancel: true,
+		            escKeyCancel: true,
+		            scrollHorizontal: false,
+		            keyboardNavigation: true,
+		            loopTour: false,
+		            onStartTour: function(e) {},
+		            onEndTour: function() {
+		                e("html, body").animate({
+		                    scrollTop: 0
+		                }, 1e3, "swing")
+		            },
+		            onProgress: function(e) {},
+		            steps: [{
+		                hookTo: "",
+		                content: "#step-1",
+		                width: 400,
+		                position: "sc",
+		                offsetY: 0,
+		                offsetX: 0,
+		                fxIn: "fadeIn",
+		                fxOut: "bounceOutUp",
+		                showStepDelay: 500,
+		                center: "step",
+		                scrollSpeed: 400,
+		                scrollEasing: "swing",
+		                scrollDelay: 0,
+		                timer: "00:00",
+		                highlight: true,
+		                keepHighlighted: true,
+		                onShowStep: function(e) {},
+		                onHideStep: function(e) {}
+		            }, {
+		                hookTo: "",
+		                content: "#step-2",
+		                width: 400,
+		                position: "sc",
+		                offsetY: 0,
+		                offsetX: 0,
+		                fxIn: "fadeIn",
+		                fxOut: "bounceOutLeft",
+		                showStepDelay: 1e3,
+		                center: "step",
+		                scrollSpeed: 400,
+		                scrollEasing: "swing",
+		                scrollDelay: 0,
+		                timer: "00:00",
+		                highlight: true,
+		                keepHighlighted: true,
+		                onShowStep: function(e) {},
+		                onHideStep: function(e) {}
+		            }, {
+		                hookTo: "",
+		                content: "#step-3",
+		                width: 400,
+		                position: "sc",
+		                offsetY: 0,
+		                offsetX: 0,
+		                fxIn: "fadeIn",
+		                fxOut: "bounceOutRight",
+		                showStepDelay: 1e3,
+		                center: "step",
+		                scrollSpeed: 400,
+		                scrollEasing: "swing",
+		                scrollDelay: 0,
+		                timer: "00:00",
+		                highlight: true,
+		                keepHighlighted: true,
+		                onShowStep: function(e) {},
+		                onHideStep: function(e) {}
+		            }],
+		            stepDefaults: [{
+		                width: 500,
+		                position: "tr",
+		                offsetY: 0,
+		                offsetX: 0,
+		                fxIn: "",
+		                fxOut: "",
+		                showStepDelay: 0,
+		                center: "step",
+		                scrollSpeed: 200,
+		                scrollEasing: "swing",
+		                scrollDelay: 0,
+		                timer: "00:00",
+		                highlight: true,
+		                keepHighlighted: false,
+		                onShowStep: function() {},
+		                onHideStep: function() {}
+		            }]
+		        }]
+		    })
+		})
+	</script>
+</body>
+</html>
