@@ -51,15 +51,15 @@ a{
 /*
 -------------------------------- Formas ------------------------------------*/
 .circle-responsive {
-  background: #000;
-  border-radius: 50%;
-  border: 2px solid #fff;
-  height: 0;
-  margin-top: -15%;
-  padding-bottom: 40%;
-  width: 40%;
-  text-align: center;
-  left: 30%;
+    background: none repeat scroll 0 0 #000;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    height: 0;
+    left: 30%;
+    margin-top: -22%;
+    padding-bottom: 60%;
+    text-align: center;
+    width: 60%;
 }
 .circle-responsive h4{
   margin-top: 27%;
@@ -159,12 +159,11 @@ a.hvr-pop:hover{
 /*
 -------------------------- reutilizar -----------------*/
 .verticalLine {
-    border-left: thick solid #FFFFFF;
+    border: 2px ridge silver;
+    bottom: -200%;
+    height: 200%;
     margin: 0 auto;
     position: absolute;
-    bottom: -100%;
-    height: 100%;
-    border: 2px ridge silver;
     z-index: 0;
 }
 /*
