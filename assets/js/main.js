@@ -19,8 +19,8 @@ jQuery(document).ready(function($){
 	$("#fittext1").fitText(0.4);
 	// $("#fittext2").fitText(1.2);
 	$("#fittext2").fitText(2.2);
-	$("#fittext4").fitText(0.68);
-	$("#fittext41").fitText(0.85);
+	$("#fittext4").fitText(0.85);
+	$("#fittext41").fitText(1.06);
 	$("#fittext42").fitText(0.6);
 	$("#fittext5").fitText(0.1);
 
