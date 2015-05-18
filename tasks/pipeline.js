@@ -16,10 +16,10 @@
 //  to change `assets/styles/importer.less` instead.)
 var cssFilesToInject = [
 
-  'styles/angular-toastr.css',
-  'styles/importer.css',
-  'styles/pwt/*.css',
-  'styles/**/*.css'
+//  'styles/angular-toastr.css',
+//  'styles/importer.css',
+//  'styles/pwt/*.css',
+//  'styles/**/*.css'
 ];
 
 
