@@ -2,5 +2,6 @@
 	"pIntro" : "Technology Company, local <br> planning future. US <strong>80+</strong>.",
 	"signup" : "<i class='fa fa-user-plus'></i> <span class='jodersito'> Join Up</span>",
 	"contactus" : "<i class='fa fa-lg fa-building-o'></i> <span class='jodersito'> Contact Us</span>",
-	"start" : "<span class='jodersito'>Start</span><br><i class='fa fa-2x fa-angle-down'></i>"
+	"start" : "<span class='jodersito'>Start</span><br><div class='arrow bounce'></div>",
+	"title" : "iTux | Technology Company, local planning future."
 }
