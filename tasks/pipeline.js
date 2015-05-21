@@ -15,7 +15,7 @@
 // (if you're using LESS with the built-in default config, you'll want
 //  to change `assets/styles/importer.less` instead.)
 var cssFilesToInject = [
-  //'styles/labs-cms.css'
+  'styles/base.css',
   //  'styles/angular-toastr.css',
   'styles/importer.css',
   //  'styles/pwt/*.css',
