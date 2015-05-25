@@ -38,6 +38,7 @@ module.exports.routes = {
 
   'GET /signup': {view: 'signup'},
   'GET /': 'PageController.showHomePage',
+  'GET /new-home': {view: 'new-home'},
   'GET /labs': 'PageController.showLabsPage',
   'GET /example': {view: 'example'},
   ////////////////////////////////////////////////////////////

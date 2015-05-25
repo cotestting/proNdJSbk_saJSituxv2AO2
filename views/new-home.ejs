@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+	
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="/styles/style2.css" />
+  <!--[if IE]><style>.main{display:none;}</style><![endif]-->
+  <link rel="stylesheet" href="/styles/style-content.css">
+  <style>
+    #load{
+      width:auto;
+      height:auto;
+      position:fixed;
+      z-index:9999;
+      left: 50%;
+      top: 45vh;
+    }
+    .contenido {
+        height: auto;
+        position: fixed;
+        width: auto;
+        bottom: 0;
+        z-index: 9999;
+    }
+    .sec-inputs{
+      float: right;
+      top: 5%;
+      position: fixed;
+      right: 5%;
+      width: 40%;
+      padding: 15px;
+      z-index: 9;
+    }
+    .logo{
+      padding: 0;
+      margin: 0 -15px;
+    }
+    .myd{
+      width:95% !important;
+    }
+    .haber{
+        color: #FFF;
+        position: relative;
+        top: 40%;
+        left: 30%;
+        font-weight: 700;
+        font-size: 25px;
+    }
+    .circle {
+        background-color: #89CFFF;
+        border-radius: 50%;
+        border: 4px solid #FFF;
+        font-family: "Segoe UI",tahoma,sans-serif;
+        font-size: 12px;
+        height: 60px;
+        left: 55%;
+        line-height: 60px;
+        margin-left: -50px;
+        margin-top: -50px;
+        position: absolute;
+        text-align: center;
+        top: 48%;
+        vertical-align: middle;
+        width: 60px;
+    }
+    .circle i {
+      color: #FFF;
+     
+    }
+    .circle1{
+      /*background-color: #F07E7E;*/
+      background-color: #FF4842;
+    }
+    .circle2{
+      /*background-color: #8AD56A;*/
+      background-color: #7DCD40;
+    }
+    .circle3{
+      background-color: #3AADCA;
+    }
+    .circle4{
+      /*background-color: #FFFC5D;*/
+      background-color: #FCC23C;
+    }
+    .circle5{
+      background-color: #B69D92;
+    }
+    .circlen{
+      background-color: transparent;
+      border: none;
+    }
+    .content-circle{
+      background-color: #fff;
+      box-shadow: 0 1px 2px rgba(0,0,0,.3);
+      border-radius: 3px;
+      margin-left: 0.5%;
+      margin-top: 2%;
+      width: 95%;
+      height: 40vh;
+    }
+    .head-sec{
+        height: 15vh;
+        width: 100%;
+        background-color: #FF4842;
+        border-bottom: 7px solid #CA1510;
+    }
+    .head-sec a{
+        color: #FFF;
+        padding-top: 5%;
+    }
+    .content-sec{
+      padding: 15px;
+    }
+    .notif-pro{
+      border: 1px solid #FF4842;
+      width: 100%;
+      height: 10vh;
+      border-left: 5px solid #FF4842;
+    }
+    .num-not{
+      font-size: 30px;
+      color: #FF4842;
+    }
+    .shield{
+      width: 25%;
+      height: 120px;
+      position: absolute;
+      text-align: center;
+    }
+    .text-not{
+      font-size: 40px;
+      color: #FFF;
+      text-align: center;
+      font-size: 25px;
+      font-weight: 700;
+    }
+    .fa-6{
+      font-size: 6em;
+      color: #6DD3E7;
+    }
+    a.hed-content{
+      color: #FF4842;
+      text-decoration: none;
+    }
+    .cont-content{
+      padding: 10px 45px;
+    }
+    .my-sep{
+      position: fixed;
+      right: 6.7%;
+      width: auto;
+    }
+    .slogan{
+        margin-bottom: 3%;
+        margin-top: -4%;
+    }
+    #build{
+      display: none;
+      color: #FFF;
+      font-size: 5em;
+    }
+    @media screen and (max-width: 1025px ){
+        .contenido img{
+          display: none;
+        }
+        .sec-inputs {
+            float: right;
+            padding: 15px;
+            position: fixed;
+            right: 5%;
+            top: 5%;
+            width: 50%;
+            z-index: 9;
+        }
+    }
+    @media screen and (max-height: 601px ){
+        #contents, .sec-inputs{
+            display: none;
+        }
+        #build{
+          display: block;
+        }
+    }
+  </style>
+  <script>
+    document.onreadystatechange = function () {
+      var state = document.readyState
+      if (state == 'interactive') {
+           document.getElementById('contents').style.visibility="hidden";
+      } else if (state == 'complete') {
+          setTimeout(function(){
+             document.getElementById('interactive');
+             document.getElementById('load').style.visibility="hidden";
+             document.getElementById('contents').style.visibility="visible";
+          },1000);
+      }
+    }
+    jQuery(function($){
+      !jQuery.easing && (jQuery.easing = {});
+      !jQuery.easing.easeOutQuad && (jQuery.easing.easeOutQuad = function( p ) { return 1 - Math.pow( 1 - p, 2 ); });
+      
+      var circleController = {
+        create: function( circle ){
+          var obj = {
+            angle: circle.data('angle'),
+            element: circle,
+            measure: $('<div />').css('width', 360 * 8 + parseFloat(circle.data('angle'))),
+            update: circleController.update,
+            reposition: circleController.reposition,
+          };
+          obj.reposition();
+          return obj;
+        },
+        update: function( angle ){
+          this.angle = angle;
+          this.reposition();
+        },
+        reposition: function(){
+          var radians = this.angle * Math.PI / 180, radius = 600 / 2;
+          this.element.css({
+            marginLeft: (Math.sin( radians ) * radius - 50) + 'px',
+            marginTop: (Math.cos( radians ) * radius - 50) + 'px'
+          });
+        }
+      };
+      
+      var spin = {
+        circles: [],
+        left: function(){
+          var self = this;
+          $.each(this.circles, function(i, circle){
+            circle.measure.stop(true, false).animate(
+              { 'width': '-=45' },
+              {
+                easing: 'easeOutQuad',
+                duration: 1000,
+                step: function( now ){ circle.update( now ); }
+              }
+            );
+          });
+        },
+        right: function(){
+          var self = this;
+          $.each(this.circles, function(i, circle){
+            circle.measure.stop(true, false).animate(
+              { 'width': '+=45' },
+              {
+                easing: 'easeOutQuad',
+                duration: 1000,
+                step: function( now ){ circle.update( now ); }
+              }
+            );
+          });
+        },
+        prep: function( circles ){
+          for ( var i=0, circle; i<circles.length; i++ ) {
+            this.circles.push(circleController.create($(circles[i])));
+          }
+        }
+      };
+      
+      $('#goL').click(function(){ spin.left() });
+      $('#goR').click(function(){ spin.right() });
+      
+      spin.prep($('.circle'));
+    });  
+  </script>
+ 
+  
+</head>
+<body>
+  <div id="load">
+  	<div class="container container2">
+  	  <div class="cube">
+  	    <div class="side side1"></div>
+  	    <div class="side side2"></div>
+  	    <div class="side side3"></div>
+  	    <div class="side side4"></div>
+  	    <div class="side side5"></div>
+  	    <div class="side side6"></div>
+  	  </div>
+  	</div>
+  </div>
+  <div id="build">
+    <img src="https://possibleapp.com/blog/wp-content/uploads/2015/03/1-Introduccion-500x289.png" alt=""> En construccion
+  </div>
+  <div id="contents">
+      <div class="background">
+          <div class="cloud large cloud-1">
+              <div></div><div></div><div></div><div></div>
+          </div>
+          <div class="cloud normal cloud-2">
+            <div></div><div></div><div></div><div></div>
+          </div>
+          <div class="cloud small cloud-3">
+            <div></div><div></div><div></div><div></div>
+          </div>
+          <div class="cloud tiny cloud-4">
+            <div></div><div></div><div></div><div></div>
+          </div>
+          <div class="cloud large cloud-5">
+            <div></div><div></div><div></div><div></div>
+          </div>
+          <div class="cloud normal cloud-6">
+            <div></div><div></div><div></div><div></div>
+          </div>
+          <div class="cloud small cloud-7">
+            <div></div><div></div><div></div><div></div>
+          </div>
+          <div class="cloud tiny cloud-8">
+            <div></div><div></div><div></div><div></div>
+          </div>
+          <div class="cloud small cloud-9">
+            <div></div><div></div><div></div><div></div>
+          </div>
+          <div class="cloud normal cloud-10">
+            <div></div><div></div><div></div><div></div>
+          </div>
+          <div class="cloud tiny cloud-11">
+            <div></div><div></div><div></div><div></div>
+          </div>
+          <div class="cloud small cloud-12">
+            <div></div><div></div><div></div><div></div>
+          </div>
+      </div>
+      <div class="contenido">
+          <img src="http://sia1.subirimagenes.net/img/2015/05/25/15052508584786803.png" alt="geek">
+          <div class="">
+              <div class="">
+                  <a id="goL" href="javascript:void(0);">
+                    <div class="circlen circle" data-angle="80"><i class="fa fa-angle-down fa-3x"></i></div>
+                  </a>
+                  <a href="" class="">
+                      <div class="circle1 circle active-itux" data-angle="100"><i class="fa fa-skyatlas fa-2x"></i></div>
+                  </a>
+                  <a href="">
+                    <div class="circle2 circle" data-angle="120"><i class="fa fa-users fa-2x"></i></div>
+                  </a>
+                  <a href="">
+                    <div class="circle3 circle" data-angle="140"><i class="fa fa-flask fa-2x"></i></div>
+                  </a>
+                  <a href="">
+                    <div class="circle4 circle" data-angle="160"><i class="fa fa-newspaper-o fa-2x"></i></div>
+                  </a>
+                  <a href="">
+                    <div class="circle5 circle" data-angle="180"><i class="fa fa-code fa-2x"></i></div>
+                  </a>
+                  <a id="goR" href="javascript:void(0);">
+                    <div class="circlen circle" data-angle="200"><i class="fa fa-angle-left fa-3x"></i></div>
+                  </a>
+              </div>
+          </div>
+          <div class="sec-inputs">
+          <div class="logo">
+            <h1 id="fittext1" style=""><span class="i-col">i</span><span class="t-col">T</span><span class="u-col">u</span><span class="x-col">x</span>
+            </h1>
+            <div class="slogan">
+                <h3>Compañia Tecnológica planificando el futuro local. ES 80+</h3>
+            </div>
+          </div>
+          <div class="row">
+              <form class="">
+                  <input type="email" class="form-control input-lg myd" id="" placeholder="jane.doe@example.com"><br>
+                  <button type="submit" class="btn btn-lg btn-success">Join Up</button><div class="my-sep"><button type="submit" class="btn btn-lg btn-primary">Facebook</button><button type="submit" class="btn btn-lg btn-info">Twitter</button><button type="submit" class="btn btn-lg btn-danger">Google +</button></div>
+              </form>
+              <br><br><br>
+              <div class="shield"><i class="fa fa-shirtsinbulk fa-6"></i><br><span class="text-not">546</span></div>
+              <div class="content-circle">
+                  <div class="head-sec">
+                      <a href=""><i class="fa fa-skyatlas fa-4x"></i></a>
+                  </div>
+                  <div class="content-sec">
+                      <div class="row">
+                          <div class="col-md-12">
+                            <a href="#" class="hed-content">
+                                <i class="fa fa-info-circle fa-2x"></i> &nbsp;&nbsp;&nbsp;<span class="num-not">¿Que es esto?</span>
+                            </a>
+                          </div>
+                      </div><br>
+                      <div class="row">
+                          <div class="col-md-12">
+                              <!--<div class="notif-pro"></div>
+                              <div class="notif-pro"></div>-->
+                              <div class="cont-content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit nam dolor atque, saepe obcaecati amet ab! Necessitatibus velit sint omnis, atque facilis autem culpa qui, ullam, fuga ea voluptatem, dolor.</p>
+                              </div>
+                              
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+          <div id="loader-wrapper">
+              <div id="loader"></div>
+              <div class="loader-section section-left"></div>
+              <div class="loader-section section-right"></div>
+          </div>
+
+      </div>
+      
+  </div>
+  
+ 
+</body>
+</html>

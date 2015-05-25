@@ -16,10 +16,10 @@
 //  to change `assets/styles/importer.less` instead.)
 var cssFilesToInject = [
   'styles/base.css',
-  //  'styles/angular-toastr.css',
+  'styles/angular-toastr.css',
   'styles/importer.css',
-  //  'styles/pwt/*.css',
-  //  'styles/**/*.css'
+  'styles/pwt/*.css',
+  'styles/**/*.css'
 ];
 
 
@@ -28,23 +28,23 @@ var cssFilesToInject = [
 var jsFilesToInject = [
   
   // Load sails.io before everything else
-  //  'js/dependencies/sails.io.js',
+  'js/dependencies/sails.io.js',
 
   // Dependencies like jQuery, or Angular are brought in here
-  //  'js/dependencies/angular.1.3.15.js',
-  //  'js/dependencies/**/*.js',
-  //  'js/private/dashboard/DashboardModule.js',
-  //  'js/public/home/HomeModule.js',
-  //  'js/public/signup/SignupModule.js',
-  //  'js/private/dashboard/*.js',
-  //  'js/public/home/*.js',
-  //  'js/public/signup/*.js',
+  'js/dependencies/angular.1.3.15.js',
+  'js/dependencies/**/*.js',
+  'js/private/dashboard/DashboardModule.js',
+  'js/public/home/HomeModule.js',
+  'js/public/signup/SignupModule.js',
+  'js/private/dashboard/*.js',
+  'js/public/home/*.js',
+  'js/public/signup/*.js',
   
   // All of the rest of your client-side js files
   // will be injected here in no particular order.
-  //  'js/private/**/*.js',
-  //  'js/public/**/*.js',
-  //  'js/**/*.js'
+  'js/private/**/*.js',
+  'js/public/**/*.js',
+  'js/**/*.js'
 ];
 
 
