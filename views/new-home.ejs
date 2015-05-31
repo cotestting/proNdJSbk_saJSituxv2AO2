@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title><%= __('Home Page') %></title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
@@ -17,7 +17,10 @@
 
   <link rel="stylesheet" type="text/css" href="/styles/style2.css" />
   <!--[if IE]><style>.main{display:none;}</style><![endif]-->
+  <link rel="stylesheet" href="css/tabby.css">
+  <link rel="stylesheet" href="css/custom.css">
   <link rel="stylesheet" href="/styles/style-content.css">
+
   <style>
     #load{
       width:auto;
@@ -113,8 +116,6 @@
     .head-sec{
         height: 15vh;
         width: 100%;
-        background-color: #FF4842;
-        border-bottom: 7px solid #CA1510;
     }
     .head-sec a{
         color: #FFF;
@@ -129,9 +130,8 @@
       height: 10vh;
       border-left: 5px solid #FF4842;
     }
-    .num-not{
+    .fz-big{
       font-size: 30px;
-      color: #FF4842;
     }
     .shield{
       width: 25%;
@@ -148,7 +148,8 @@
     }
     .fa-6{
       font-size: 6em;
-      color: #6DD3E7;
+      /*color: #6DD3E7;*/
+      margin-top: -5px; 
     }
     a.hed-content{
       color: #FF4842;
@@ -170,6 +171,69 @@
       display: none;
       color: #FFF;
       font-size: 5em;
+    }
+    button.secol{
+        color: #FFF;
+        background-color: #D34A26;
+      }
+      .tabs-pane button.secol{
+        color: #FFF;
+        background-color: #333333;
+      }
+      button{
+        color: #111;
+        background-color: #ddd;
+      }
+    .bg-pro{
+        background-color: #FF4842;
+    }
+    .bb-pro{
+        border-bottom: 7px solid #CA1510;
+    }
+    .co-pro{
+        color: #FF4842;
+    }
+    .bg-com{
+        background-color: #7dcd40;
+    }
+    .bb-com{
+        border-bottom: 7px solid #588A31;
+    }
+    .co-com{
+        color: #7dcd40;
+    }
+    .bg-lab{
+        background-color: #3aadca;
+    }
+    .bb-lab{
+        border-bottom: 7px solid #2A7C8F;
+    }
+    .co-lab{
+        color: #3aadca;
+    }
+    .bg-blo{
+        background-color: #fcc23c;
+    }
+    .bb-blo{
+        border-bottom: 7px solid #B08930;
+    }
+    .co-blo{
+        color: #fcc23c;
+    }
+    .bg-nex{
+        background-color: #b69d92;
+    }
+    .bb-nex{
+        border-bottom: 7px solid #706662;
+    }
+    .co-nex{
+        color: #b69d92;
+    }
+    .co-neu{
+        color: #142008;
+    }
+    .co-luz{
+        color: #FFF;
     }
     @media screen and (max-width: 1025px ){
         .contenido img{
@@ -338,24 +402,24 @@
       <div class="contenido">
           <img src="http://sia1.subirimagenes.net/img/2015/05/25/15052508584786803.png" alt="geek">
           <div class="">
-              <div class="">
+              <div class="tabs">
                   <a id="goL" href="javascript:void(0);">
                     <div class="circlen circle" data-angle="80"><i class="fa fa-angle-down fa-3x"></i></div>
                   </a>
-                  <a href="" class="">
-                      <div class="circle1 circle active-itux" data-angle="100"><i class="fa fa-skyatlas fa-2x"></i></div>
+                  <a href="#tab1">
+                      <div class="circle1 circle active-itux" data-tab="#tab1" data-angle="100"><i class="fa fa-skyatlas fa-2x"></i></div>
                   </a>
-                  <a href="">
-                    <div class="circle2 circle" data-angle="120"><i class="fa fa-users fa-2x"></i></div>
+                  <a href="#tab2">
+                    <div class="circle2 circle" data-tab="#tab2" data-angle="120"><i class="fa fa-users fa-2x"></i></div>
                   </a>
-                  <a href="">
-                    <div class="circle3 circle" data-angle="140"><i class="fa fa-flask fa-2x"></i></div>
+                  <a href="#tab3">
+                    <div class="circle3 circle" data-tab="#tab3" data-angle="140"><i class="fa fa-flask fa-2x"></i></div>
                   </a>
-                  <a href="">
-                    <div class="circle4 circle" data-angle="160"><i class="fa fa-newspaper-o fa-2x"></i></div>
+                  <a href="#tab4">
+                    <div class="circle4 circle" data-tab="#tab4" data-angle="160"><i class="fa fa-newspaper-o fa-2x"></i></div>
                   </a>
-                  <a href="">
-                    <div class="circle5 circle" data-angle="180"><i class="fa fa-code fa-2x"></i></div>
+                  <a href="#tab5">
+                    <div class="circle5 circle" data-tab="#tab5" data-angle="180"><i class="fa fa-code fa-2x"></i></div>
                   </a>
                   <a id="goR" href="javascript:void(0);">
                     <div class="circlen circle" data-angle="200"><i class="fa fa-angle-left fa-3x"></i></div>
@@ -363,44 +427,151 @@
               </div>
           </div>
           <div class="sec-inputs">
-          <div class="logo">
-            <h1 id="fittext1" style=""><span class="i-col">i</span><span class="t-col">T</span><span class="u-col">u</span><span class="x-col">x</span>
-            </h1>
-            <div class="slogan">
-                <h3>Compañia Tecnológica planificando el futuro local. ES 80+</h3>
-            </div>
-          </div>
-          <div class="row">
-              <form class="">
-                  <input type="email" class="form-control input-lg myd" id="" placeholder="jane.doe@example.com"><br>
-                  <button type="submit" class="btn btn-lg btn-success">Join Up</button><div class="my-sep"><button type="submit" class="btn btn-lg btn-primary">Facebook</button><button type="submit" class="btn btn-lg btn-info">Twitter</button><button type="submit" class="btn btn-lg btn-danger">Google +</button></div>
-              </form>
-              <br><br><br>
-              <div class="shield"><i class="fa fa-shirtsinbulk fa-6"></i><br><span class="text-not">546</span></div>
-              <div class="content-circle">
-                  <div class="head-sec">
-                      <a href=""><i class="fa fa-skyatlas fa-4x"></i></a>
+              <div class="logo">
+                  <h1 id="fittext1" style=""><span class="i-col">i</span><span class="t-col">T</span><span class="u-col">u</span><span class="x-col">x</span>
+                  </h1>
+                  <div class="slogan">
+                      <h3>Compañia Tecnológica planificando el futuro local. ES 80+</h3>
                   </div>
-                  <div class="content-sec">
-                      <div class="row">
-                          <div class="col-md-12">
-                            <a href="#" class="hed-content">
-                                <i class="fa fa-info-circle fa-2x"></i> &nbsp;&nbsp;&nbsp;<span class="num-not">¿Que es esto?</span>
-                            </a>
-                          </div>
-                      </div><br>
-                      <div class="row">
-                          <div class="col-md-12">
-                              <!--<div class="notif-pro"></div>
-                              <div class="notif-pro"></div>-->
-                              <div class="cont-content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit nam dolor atque, saepe obcaecati amet ab! Necessitatibus velit sint omnis, atque facilis autem culpa qui, ullam, fuga ea voluptatem, dolor.</p>
+              </div>
+              <div class="row">
+                  <form class="">
+                      <input type="email" class="form-control input-lg myd" id="" placeholder="jane.doe@example.com"><br>
+                      <button type="submit" class="btn btn-lg btn-success">Join Up</button><div class="my-sep"><button type="submit" class="btn btn-lg btn-primary">Facebook</button><button type="submit" class="btn btn-lg btn-info">Twitter</button><button type="submit" class="btn btn-lg btn-danger">Google +</button></div>
+                  </form>
+                  <br><br><br>
+                  <div class="tabs-content">
+                      <div class="tabs-pane active" id="tab1">
+                          <div class="shield"><i class="fa fa-shirtsinbulk fa-6 co-luz"></i><br><span class="text-not">546</span></div>
+                          <div class="content-circle">
+                              <div class="head-sec bg-pro bb-pro">
+                                  <a href=""><i class="fa fa-skyatlas fa-4x"></i></a>
                               </div>
-                              
+                              <div class="content-sec">
+                                  <div class="row">
+                                      <div class="col-md-12">
+                                        <a href="#" class="hed-content">
+                                            <i class="fa fa-info-circle fa-2x co-pro"></i> &nbsp;&nbsp;&nbsp;<span class="fz-big co-pro">¿Que es esto?</span>
+                                        </a>
+                                      </div>
+                                  </div><br>
+                                  <div class="row">
+                                      <div class="col-md-12">
+                                          <!--<div class="notif-pro"></div>
+                                          <div class="notif-pro"></div>-->
+                                            <div class="cont-content">
+                                                <p><span class="fz-big co-pro">iProjects</span> <br>Es una sección donde podras encontrar proyectos de gente entusiasta que tiene un desarrollo para una determinada nescesidad, descubre que proyectos hay en lista que uno de ellos puedes estar nescesitando.</p>
+                                            </div>
+                                      </div>
+                                  </div>
+                              </div>
                           </div>
                       </div>
-                    </div>
-                  </div>
+                      <div class="tabs-pane" id="tab2">
+                          <div class="shield"><i class="fa fa-shirtsinbulk fa-6 co-luz"></i><br><span class="text-not">352</span></div>
+                          <div class="content-circle">
+                              <div class="head-sec bg-com bb-com">
+                                  <a href=""><i class="fa fa-users fa-4x"></i></a>
+                              </div>
+                              <div class="content-sec">
+                                  <div class="row">
+                                      <div class="col-md-12">
+                                        <a href="#" class="hed-content">
+                                            <i class="fa fa-info-circle fa-2x co-com"></i> &nbsp;&nbsp;&nbsp;<span class="fz-big co-com">¿Que es esto?</span>
+                                        </a>
+                                      </div>
+                                  </div><br>
+                                  <div class="row">
+                                      <div class="col-md-12">
+                                          <!--<div class="notif-pro"></div>
+                                          <div class="notif-pro"></div>-->
+                                            <div class="cont-content">
+                                                <p><span class="fz-big co-com">iCommunity</span> <br>Es una sección donde podras encontrar proyectos de gente entusiasta que tiene un desarrollo para una determinada nescesidad, descubre que proyectos hay en lista que uno de ellos puedes estar nescesitando.</p>
+                                            </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="tabs-pane" id="tab3">
+                          <div class="shield"><i class="fa fa-shirtsinbulk fa-6 co-luz"></i><br><span class="text-not">845</span></div>
+                          <div class="content-circle">
+                              <div class="head-sec bg-lab bb-lab">
+                                  <a href=""><i class="fa fa-flask fa-4x"></i></a>
+                              </div>
+                              <div class="content-sec">
+                                  <div class="row">
+                                      <div class="col-md-12">
+                                        <a href="#" class="hed-content">
+                                            <i class="fa fa-info-circle fa-2x co-lab"></i> &nbsp;&nbsp;&nbsp;<span class="fz-big co-lab">¿Que es esto?</span>
+                                        </a>
+                                      </div>
+                                  </div><br>
+                                  <div class="row">
+                                      <div class="col-md-12">
+                                          <!--<div class="notif-pro"></div>
+                                          <div class="notif-pro"></div>-->
+                                            <div class="cont-content">
+                                                <p><span class="fz-big co-lab">iLabs</span> <br>Es una sección donde podras encontrar proyectos de gente entusiasta que tiene un desarrollo para una determinada nescesidad, descubre que proyectos hay en lista que uno de ellos puedes estar nescesitando.</p>
+                                            </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="tabs-pane" id="tab4">
+                          <div class="shield"><i class="fa fa-shirtsinbulk fa-6 co-luz"></i><br><span class="text-not">762</span></div>
+                          <div class="content-circle">
+                              <div class="head-sec bg-blo bb-blo">
+                                  <a href=""><i class="fa fa-newspaper-o fa-4x"></i></a>
+                              </div>
+                              <div class="content-sec">
+                                  <div class="row">
+                                      <div class="col-md-12">
+                                        <a href="#" class="hed-content">
+                                            <i class="fa fa-info-circle fa-2x co-blo"></i> &nbsp;&nbsp;&nbsp;<span class="fz-big co-blo">¿Que es esto?</span>
+                                        </a>
+                                      </div>
+                                  </div><br>
+                                  <div class="row">
+                                      <div class="col-md-12">
+                                          <!--<div class="notif-pro"></div>
+                                          <div class="notif-pro"></div>-->
+                                            <div class="cont-content">
+                                                <p><span class="fz-big co-blo">iBlog</span> <br>Es una sección donde podras encontrar proyectos de gente entusiasta que tiene un desarrollo para una determinada nescesidad, descubre que proyectos hay en lista que uno de ellos puedes estar nescesitando.</p>
+                                            </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="tabs-pane" id="tab5">
+                          <div class="shield"><i class="fa fa-shirtsinbulk fa-6 co-luz"></i><br><span class="text-not">108</span></div>
+                          <div class="content-circle">
+                              <div class="head-sec bg-nex bb-nex">
+                                  <a href=""><i class="fa fa-code fa-4x"></i></a>
+                              </div>
+                              <div class="content-sec">
+                                  <div class="row">
+                                      <div class="col-md-12">
+                                        <a href="#" class="hed-content">
+                                            <i class="fa fa-info-circle fa-2x co-nex"></i> &nbsp;&nbsp;&nbsp;<span class="fz-big co-nex">¿Que es esto?</span>
+                                        </a>
+                                      </div>
+                                  </div><br>
+                                  <div class="row">
+                                      <div class="col-md-12">
+                                          <!--<div class="notif-pro"></div>
+                                          <div class="notif-pro"></div>-->
+                                            <div class="cont-content">
+                                                <p><span class="fz-big co-nex">iNext</span> <br>Es una sección donde podras encontrar proyectos de gente entusiasta que tiene un desarrollo para una determinada nescesidad, descubre que proyectos hay en lista que uno de ellos puedes estar nescesitando.</p>
+                                            </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>        
               </div>
           </div>
       </div>
@@ -409,11 +580,25 @@
               <div class="loader-section section-left"></div>
               <div class="loader-section section-right"></div>
           </div>
-
       </div>
-      
   </div>
-  
- 
+  <script>
+    $('.circle').click(function () {
+      $(".circle").removeClass("active-itux");
+      $(this).addClass("active-itux");
+    })
+  </script>
+  <script src="js/classList.js"></script>
+  <script src="js/tabby.js"></script>
+  <script>
+      tabby.init({
+        toggleActiveClass: 'active-itux',
+        contentActiveClass: 'active',
+        initClass: 'js-tabby',
+        callbackBefore: function ( toggle, tabID ) {},
+        callbackAfter: function ( toggle, tabID ) {}
+      });
+      
+    </script>
 </body>
 </html>
